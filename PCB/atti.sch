@@ -778,8 +778,6 @@ Text GLabel 10150 1650 2    50   Input ~ 0
 BMX_INT2
 Text GLabel 2850 5500 2    50   Input ~ 0
 BMX_INT1
-Text GLabel 2850 6000 2    50   Input ~ 0
-BMX_INT2
 $Comp
 L AsymLevelShifters:NVT2006 U3
 U 1 1 5FDCEE5F
@@ -839,17 +837,6 @@ Wire Wire Line
 	2850 4700 3150 4700
 Wire Wire Line
 	3100 4800 3100 4900
-$Comp
-L Device:Crystal_Small Y1
-U 1 1 5FE3AFDC
-P 1850 3600
-F 0 "Y1" V 1896 3512 50  0000 R CNN
-F 1 "32 MHz" V 1805 3512 50  0000 R CNN
-F 2 "Crystal:Crystal_SMD_SeikoEpson_TSX3225-4Pin_3.2x2.5mm" H 1850 3600 50  0001 C CNN
-F 3 "~" H 1850 3600 50  0001 C CNN
-	1    1850 3600
-	0    -1   -1   0   
-$EndComp
 Text GLabel 1750 5300 0    50   Input ~ 0
 OSC_IN
 Text GLabel 1750 5400 0    50   Input ~ 0
@@ -1042,17 +1029,6 @@ Wire Wire Line
 Wire Wire Line
 	2850 4800 3100 4800
 $Comp
-L Connector:Conn_01x01_Female J2
-U 1 1 5FE07EBD
-P 1550 5800
-F 0 "J2" H 1578 5826 50  0000 L CNN
-F 1 "Conn_01x01_Female" H 1578 5735 50  0000 L CNN
-F 2 "Connector_Wire:SolderWire-0.25sqmm_1x01_D0.65mm_OD1.7mm" H 1550 5800 50  0001 C CNN
-F 3 "~" H 1550 5800 50  0001 C CNN
-	1    1550 5800
-	-1   0    0    1   
-$EndComp
-$Comp
 L Connector:Conn_01x01_Female J3
 U 1 1 5FE09C11
 P 1550 5900
@@ -1064,36 +1040,98 @@ F 3 "~" H 1550 5900 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Connector:Conn_01x01_Female J4
-U 1 1 5FE0B773
-P 1550 6000
-F 0 "J4" H 1578 6026 50  0000 L CNN
-F 1 "Conn_01x01_Female" H 1578 5935 50  0000 L CNN
-F 2 "Connector_Wire:SolderWire-0.25sqmm_1x01_D0.65mm_OD1.7mm" H 1550 6000 50  0001 C CNN
-F 3 "~" H 1550 6000 50  0001 C CNN
-	1    1550 6000
-	-1   0    0    1   
+L Device:Crystal_GND24_Small Y1
+U 1 1 5FE91EF3
+P 1850 3600
+F 0 "Y1" V 1896 3456 50  0000 R CNN
+F 1 "32 MHz" V 1805 3456 50  0000 R CNN
+F 2 "Crystal:Crystal_SMD_SeikoEpson_TSX3225-4Pin_3.2x2.5mm" H 1850 3600 50  0001 C CNN
+F 3 "~" H 1850 3600 50  0001 C CNN
+	1    1850 3600
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1750 3600 1350 3600
+$Comp
+L power:GND #PWR?
+U 1 1 5FE9FB52
+P 1950 3600
+F 0 "#PWR?" H 1950 3350 50  0001 C CNN
+F 1 "GND" V 1955 3472 50  0000 R CNN
+F 2 "" H 1950 3600 50  0001 C CNN
+F 3 "" H 1950 3600 50  0001 C CNN
+	1    1950 3600
+	0    -1   -1   0   
+$EndComp
+Text GLabel 1750 5800 0    50   Input ~ 0
+SWO
+Text GLabel 1750 6000 0    50   Input ~ 0
+BMX_INT2
+Text GLabel 2850 6000 2    50   Input ~ 0
+SWDIO
+Text GLabel 2850 6100 2    50   Input ~ 0
+SWCLK
+Text GLabel 1300 4700 1    50   Input ~ 0
+NRST
+Text GLabel 2850 6200 2    50   Input ~ 0
+JTDI
+Text GLabel 4950 2450 2    50   Input ~ 0
+SWDIO
+Text GLabel 4950 2550 2    50   Input ~ 0
+SWCLK
+Text GLabel 4950 2650 2    50   Input ~ 0
+SWO
+Text GLabel 4950 2750 2    50   Input ~ 0
+JTDI
+Text GLabel 4950 2850 2    50   Input ~ 0
+NRST
+$Comp
+L power:VDD #PWR?
+U 1 1 60088F29
+P 3950 2450
+F 0 "#PWR?" H 3950 2300 50  0001 C CNN
+F 1 "VDD" V 3965 2577 50  0000 L CNN
+F 2 "" H 3950 2450 50  0001 C CNN
+F 3 "" H 3950 2450 50  0001 C CNN
+	1    3950 2450
+	0    -1   -1   0   
 $EndComp
 $Comp
-L Connector:Conn_01x01_Female J8
-U 1 1 5FE36D10
-P 3050 6100
-F 0 "J8" H 3078 6126 50  0000 L CNN
-F 1 "Conn_01x01_Female" H 3078 6035 50  0000 L CNN
-F 2 "Connector_Wire:SolderWire-0.25sqmm_1x01_D0.65mm_OD1.7mm" H 3050 6100 50  0001 C CNN
-F 3 "~" H 3050 6100 50  0001 C CNN
-	1    3050 6100
-	1    0    0    -1  
+L power:GND #PWR?
+U 1 1 60089B95
+P 3950 2550
+F 0 "#PWR?" H 3950 2300 50  0001 C CNN
+F 1 "GND" V 3955 2422 50  0000 R CNN
+F 2 "" H 3950 2550 50  0001 C CNN
+F 3 "" H 3950 2550 50  0001 C CNN
+	1    3950 2550
+	0    1    1    0   
 $EndComp
 $Comp
-L Connector:Conn_01x01_Female J9
-U 1 1 5FE38A2A
-P 3050 6200
-F 0 "J9" H 3078 6226 50  0000 L CNN
-F 1 "Conn_01x01_Female" H 3078 6135 50  0000 L CNN
-F 2 "Connector_Wire:SolderWire-0.25sqmm_1x01_D0.65mm_OD1.7mm" H 3050 6200 50  0001 C CNN
-F 3 "~" H 3050 6200 50  0001 C CNN
-	1    3050 6200
+L power:GND #PWR?
+U 1 1 6008A5E8
+P 3950 2650
+F 0 "#PWR?" H 3950 2400 50  0001 C CNN
+F 1 "GND" V 3955 2522 50  0000 R CNN
+F 2 "" H 3950 2650 50  0001 C CNN
+F 3 "" H 3950 2650 50  0001 C CNN
+	1    3950 2650
+	0    1    1    0   
+$EndComp
+NoConn ~ 3950 2850
+$Comp
+L AsymConnectors:FTSH-105-01-X-D-007-K J2
+U 1 1 6009A82F
+P 4450 2650
+F 0 "J2" H 4450 3117 50  0000 C CNN
+F 1 "FTSH-105-01-X-D-007-K" H 4450 3026 50  0000 C CNN
+F 2 "AsymConnectors:SAMTEC_FTSH-105-01-X-D-007-K" H 4250 3200 50  0001 L BNN
+F 3 "" H 4700 2950 50  0001 L BNN
+F 4 "SAMTEC" H 4250 3100 50  0001 L BNN "MANUFACTURER"
+F 5 "B" H 4700 3000 50  0001 L BNN "PARTREV"
+F 6 "Manufacturer Recommendations" H 4250 3300 50  0001 L BNN "STANDARD"
+F 7 "5.7mm" H 4250 3000 50  0001 L BNN "MAXIMUM_PACKAGE_HEIGHT"
+	1    4450 2650
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
