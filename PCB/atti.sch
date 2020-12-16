@@ -332,18 +332,18 @@ Text GLabel 5650 1500 2    50   Input ~ 0
 USART1_RX
 Text GLabel 5650 1400 2    50   Input ~ 0
 USART1_TX
-Text GLabel 4350 1900 3    50   Input ~ 0
+Text GLabel 4450 1400 1    50   Input ~ 0
 VIN
 $Comp
 L power:GND #PWR?
 U 1 1 5FDAC75D
-P 4450 1900
-F 0 "#PWR?" H 4450 1650 50  0001 C CNN
-F 1 "GND" V 4450 1700 50  0000 C CNN
-F 2 "" H 4450 1900 50  0001 C CNN
-F 3 "" H 4450 1900 50  0001 C CNN
-	1    4450 1900
-	1    0    0    -1  
+P 4350 1400
+F 0 "#PWR?" H 4350 1150 50  0001 C CNN
+F 1 "GND" V 4350 1200 50  0000 C CNN
+F 2 "" H 4350 1400 50  0001 C CNN
+F 3 "" H 4350 1400 50  0001 C CNN
+	1    4350 1400
+	-1   0    0    1   
 $EndComp
 Wire Wire Line
 	6400 1250 6400 2050
@@ -487,7 +487,7 @@ Text GLabel 9450 1700 0    50   Input ~ 0
 BMX_INT1
 Text GLabel 10650 1550 2    50   Input ~ 0
 BMX_INT2
-Text GLabel 2800 5150 0    50   Input ~ 0
+Text GLabel 3900 4250 2    50   Input ~ 0
 BMX_INT1
 $Comp
 L power:GND #PWR?
@@ -691,54 +691,10 @@ F 3 "" H 2750 5750 50  0001 C CNN
 	1    2750 5750
 	-1   0    0    1   
 $EndComp
-$Comp
-L Connector:Conn_01x01_Female J7
-U 1 1 5FDFE414
-P 4100 4350
-F 0 "J7" H 4128 4376 50  0000 L CNN
-F 1 "Conn_01x01_Female" H 4128 4285 50  0000 L CNN
-F 2 "Connector_Wire:SolderWire-0.25sqmm_1x01_D0.65mm_OD1.7mm" H 4100 4350 50  0001 C CNN
-F 3 "~" H 4100 4350 50  0001 C CNN
-	1    4100 4350
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Female J5
-U 1 1 5FDFF854
-P 4100 4150
-F 0 "J5" H 4128 4176 50  0000 L CNN
-F 1 "Conn_01x01_Female" H 4128 4085 50  0000 L CNN
-F 2 "Connector_Wire:SolderWire-0.25sqmm_1x01_D0.65mm_OD1.7mm" H 4100 4150 50  0001 C CNN
-F 3 "~" H 4100 4150 50  0001 C CNN
-	1    4100 4150
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Female J6
-U 1 1 5FE016CD
-P 4100 4250
-F 0 "J6" H 4128 4276 50  0000 L CNN
-F 1 "Conn_01x01_Female" H 4128 4185 50  0000 L CNN
-F 2 "Connector_Wire:SolderWire-0.25sqmm_1x01_D0.65mm_OD1.7mm" H 4100 4250 50  0001 C CNN
-F 3 "~" H 4100 4250 50  0001 C CNN
-	1    4100 4250
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4150 4150 4200 4150
 Wire Wire Line
 	3900 4050 4150 4050
-$Comp
-L Connector:Conn_01x01_Female J3
-U 1 1 5FE09C11
-P 4100 4750
-F 0 "J3" H 4128 4776 50  0000 L CNN
-F 1 "Conn_01x01_Female" H 4128 4685 50  0000 L CNN
-F 2 "Connector_Wire:SolderWire-0.25sqmm_1x01_D0.65mm_OD1.7mm" H 4100 4750 50  0001 C CNN
-F 3 "~" H 4100 4750 50  0001 C CNN
-	1    4100 4750
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:Crystal_GND24_Small Y1
 U 1 1 5FE91EF3
@@ -763,7 +719,7 @@ F 3 "" H 3050 6700 50  0001 C CNN
 	1    3050 6700
 	0    -1   -1   0   
 $EndComp
-Text GLabel 2800 5250 0    50   Input ~ 0
+Text GLabel 3900 4350 2    50   Input ~ 0
 BMX_INT2
 Text GLabel 3900 5250 2    50   Input ~ 0
 SWDIO
@@ -1072,6 +1028,10 @@ Text Notes 7850 6250 0    50   ~ 10
 VDDA DECOUPLING
 Text Notes 9150 4500 0    50   ~ 10
 DEBUG
+Text GLabel 2800 5050 0    50   Input ~ 0
+SWO
+Text GLabel 1750 850  1    50   Input ~ 0
+VIN
 $Comp
 L Connector_Generic:Conn_02x04_Counter_Clockwise J1
 U 1 1 5FD8460D
@@ -1095,53 +1055,49 @@ F 3 "https://www.nxp.com/docs/en/data-sheet/NVT2003_04_06.pdf" H 5600 2150 50  0
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5050 1900 5050 2000
-Wire Wire Line
-	5050 2000 4550 2000
-Wire Wire Line
-	4550 2000 4550 1900
-Wire Wire Line
-	5050 1800 5000 1800
-Wire Wire Line
-	5000 1800 5000 1950
-Wire Wire Line
-	5000 1950 4650 1950
-Wire Wire Line
-	4650 1950 4650 1900
-Wire Wire Line
-	5050 1700 4750 1700
-Wire Wire Line
-	4750 1700 4750 1350
-Wire Wire Line
-	4750 1350 4650 1350
-Wire Wire Line
-	4650 1350 4650 1400
-Wire Wire Line
-	5050 1600 4800 1600
-Wire Wire Line
-	4800 1600 4800 1300
-Wire Wire Line
-	4800 1300 4550 1300
+	5050 1300 4550 1300
 Wire Wire Line
 	4550 1300 4550 1400
 Wire Wire Line
-	5050 1500 4850 1500
+	5050 1300 5050 1400
 Wire Wire Line
-	4850 1500 4850 1250
+	5050 1500 5000 1500
 Wire Wire Line
-	4850 1250 4450 1250
+	5000 1500 5000 1350
 Wire Wire Line
-	4450 1250 4450 1400
+	5000 1350 4650 1350
 Wire Wire Line
-	5050 1400 4900 1400
+	4650 1350 4650 1400
 Wire Wire Line
-	4900 1400 4900 1200
+	5050 1600 4750 1600
 Wire Wire Line
-	4900 1200 4350 1200
+	4750 1600 4750 1950
 Wire Wire Line
-	4350 1200 4350 1400
-Text GLabel 2800 5050 0    50   Input ~ 0
-SWO
-Text GLabel 1750 850  1    50   Input ~ 0
-VIN
+	4750 1950 4650 1950
+Wire Wire Line
+	4650 1950 4650 1900
+Wire Wire Line
+	5050 1700 4800 1700
+Wire Wire Line
+	4800 1700 4800 2000
+Wire Wire Line
+	4800 2000 4550 2000
+Wire Wire Line
+	4550 2000 4550 1900
+Wire Wire Line
+	5050 1800 4850 1800
+Wire Wire Line
+	4850 1800 4850 2050
+Wire Wire Line
+	4850 2050 4450 2050
+Wire Wire Line
+	4450 2050 4450 1900
+Wire Wire Line
+	5050 1900 4900 1900
+Wire Wire Line
+	4900 1900 4900 2100
+Wire Wire Line
+	4900 2100 4350 2100
+Wire Wire Line
+	4350 2100 4350 1900
 $EndSCHEMATC
